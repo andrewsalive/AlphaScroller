@@ -94,5 +94,4 @@ public class IndexableListView extends ListView {
         if (mScroller != null)
             mScroller.onSizeChanged(w, h, oldw, oldh);
     }
-
 }

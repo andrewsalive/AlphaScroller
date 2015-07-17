@@ -1,11 +1,15 @@
 package com.example.andrews.alphascroller;
 
 import android.app.Activity;
+import android.content.ContentValues;
 import android.content.Context;
 import android.os.Bundle;
 import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
 import android.widget.SectionIndexer;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Another variation of the list of cheeses. In this case, we use
@@ -28,10 +32,18 @@ public class MainActivity extends Activity /*ListActivity implements ListView.On
 
         ContentAdapter adapter = new ContentAdapter(this,
                 android.R.layout.simple_list_item_1, mStrings);
+        List<ContentValues> list = new ArrayList<>();
+        for (int i = 0; i < mStrings.length; i++) {
+            ContentValues contentValues = new ContentValues();
+            contentValues.put("name", mStrings[i]);
+            list.add(contentValues);
+        }
+        CustomAdapter myAdapter = new CustomAdapter(this, R.layout.listview_item, list);
 
         mListView = (IndexableListView) findViewById(R.id.listview);
-        mListView.setAdapter(adapter);
-        mListView.setFastScrollEnabled(true);
+        mListView.setAdapter(myAdapter);
+//        mListView.setAdapter(adapter);
+                mListView.setFastScrollEnabled(true);
     }
 
     private class ContentAdapter extends ArrayAdapter<String> implements SectionIndexer {
