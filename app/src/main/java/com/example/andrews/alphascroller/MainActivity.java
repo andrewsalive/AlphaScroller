@@ -38,7 +38,7 @@ public class MainActivity extends Activity /*ListActivity implements ListView.On
             contentValues.put("name", mStrings[i]);
             list.add(contentValues);
         }
-        CustomAdapter myAdapter = new CustomAdapter(this, R.layout.listview_item, list);
+        CustomAdapter myAdapter = new CustomAdapter(this, R.layout.listview_sep, list);
 
         mListView = (IndexableListView) findViewById(R.id.listview);
         mListView.setAdapter(myAdapter);
@@ -186,7 +186,7 @@ public class MainActivity extends Activity /*ListActivity implements ListView.On
             "Lincolnshire Poacher", "Lingot Saint Bousquet d'Orb", "Liptauer",
             "Little Rydings", "Livarot", "Llanboidy", "Llanglofan Farmhouse",
             "Loch Arthur Farmhouse", "Loddiswell Avondale", "Longhorn",
-            "Lou Palou", "Lou Pevre", "Lyonnais", "Maasdam", "Macconais",
+            "Lou Palou", "Lou Pevre", "Lyonnais", /*"Maasdam", "Macconais",
             "Mahoe Aged Gouda", "Mahon", "Malvern", "Mamirolle", "Manchego",
             "Manouri", "Manur", "Marble Cheddar", "Marbled Cheeses",
             "Maredsous", "Margotin", "Maribo", "Maroilles", "Mascares",
@@ -200,7 +200,7 @@ public class MainActivity extends Activity /*ListActivity implements ListView.On
             "Morbier Cru de Montagne", "Mothais a la Feuille", "Mozzarella",
             "Mozzarella (Australian)", "Mozzarella di Bufala",
             "Mozzarella Fresh, in water", "Mozzarella Rolls", "Munster",
-            "Murol", "Mycella", "Myzithra", "Naboulsi", "Nantais",
+            "Murol", "Mycella", "Myzithra",*/ "Naboulsi", "Nantais",
             "Neufchatel", "Neufchatel (Australian)", "Niolo", "Nokkelost",
             "Northumberland", "Oaxaca", "Olde York", "Olivet au Foin",
             "Olivet Bleu", "Olivet Cendre", "Orkney Extra Mature Cheddar",
